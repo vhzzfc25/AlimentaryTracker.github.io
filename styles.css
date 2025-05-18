@@ -1,0 +1,211 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #eaf4fc;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 520px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 10px;
+  background: #e2eefc;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.tab.active {
+  background: #5a8dee;
+  color: white;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  background: linear-gradient(to right, #5a8dee, #b06ab3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-weight: 500;
+  margin-top: 1.2rem;
+  display: block;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+select,
+input[type="text"],
+input[type="number"],
+textarea,
+.upload-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  background: #e8f1fb;
+  color: #333;
+  font-family: inherit;
+}
+
+.upload-box {
+  border: 2px dashed #aac6f6;
+  border-radius: 12px;
+  background: #f5faff;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.upload-box input {
+  display: none;
+}
+
+.upload-box span {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #0076d7;
+}
+
+.info-note {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.4rem;
+}
+
+.submit-button {
+  margin-top: 2rem;
+  background: #5a8dee;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.calendar-day {
+  display: inline-block;
+  background: #eaf4fc;
+  border: 1px solid #d0e5fc;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.calendar-day:hover {
+  background: #d6e9ff;
+}
+
+.meal-list {
+  margin-top: 1rem;
+}
+
+.meal-card {
+  position: relative;
+  background: #f5faff;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.meal-card img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.meal-type {
+  font-weight: 600;
+  margin-top: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.2rem;
+}
+
+.delete-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #ff4d4f;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  transition: background 0.2s;
+}
+
+.delete-icon:hover {
+  background: #d9363e;
+}
+
+.toast {
+  background: #d4edda;
+  color: #155724;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  text-align: center;
+  display: none;
+}
+
+@media (max-width: 400px) {
+  body {
+    padding: 1rem;
+  }
+  .tabs {
+    flex-direction: column;
+  }
+}

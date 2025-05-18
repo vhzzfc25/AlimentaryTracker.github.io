@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de Comida</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="tabs">
+      <div class="tab active" data-tab="comida">🍽️ Comida</div>
+      <div class="tab" data-tab="calendario">📅 Calendario</div>
+    </div>
+
+    <!-- COMIDA -->
+    <div class="section active" id="comida">
+      <label for="mealType">Tipo de comida</label>
+      <select id="mealType">
+        <option value="Desayuno">Desayuno</option>
+        <option value="Snack">Snack</option>
+        <option value="Comida">Comida</option>
+        <option value="Merienda">Merienda</option>
+        <option value="Cena">Cena</option>
+      </select>
+
+      <h2 id="titulo">Registrar <span style="font-weight: 400;">Desayuno</span></h2>
+      <p class="description">Sube una foto de tu comida. Selecciona la fecha y añade detalles opcionales.</p>
+
+      <label for="imageUpload">📷 Foto de la Comida</label>
+      <label for="imageUpload" class="upload-box" id="uploadLabel">
+        ⬆️<br>
+        <span>Click para subir</span>
+        <input type="file" id="imageUpload" accept="image/*">
+      </label>
+
+      <label for="mealDate">📅 Fecha</label>
+      <select id="mealDate"></select>
+
+      <label for="mealName">🍛 Nombre de la comida</label>
+      <input type="text" id="mealName" placeholder="Ej: Ensalada, Bocadillo...">
+
+      <label for="mealCalories">🔥 Calorías (kcal)</label>
+      <input type="number" id="mealCalories" placeholder="Ej: 350" min="0" step="1">
+
+      <label for="extraInfo">Origen (Opcional)</label>
+      <input type="text" id="extraInfo" placeholder="Ej: Restaurante, casero">
+
+      <p class="info-note">Indicar el origen puede ayudar en futuras mejoras.</p>
+
+      <button class="submit-button" id="saveBtn">💾 Guardar Comida</button>
+      <div class="toast" id="toastMsg">Comida guardada ✅</div>
+    </div>
+
+    <!-- CALENDARIO -->
+    <div class="section" id="calendario">
+      <h2>📅 Calendario</h2>
+      <p class="description">Selecciona una fecha para ver las comidas registradas.</p>
+      <div id="calendarDays"></div>
+      <div class="meal-list" id="mealsDisplay"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
